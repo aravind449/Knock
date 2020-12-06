@@ -57,6 +57,12 @@ const getTechnicianCategoriesRegex = async (search) => {
     return response.data;
 };
 
+// changes made for technitian profile varlock
+const getBookingDetailsForTechnition = async (search) => {
+    const response = await axios.post("/services/list-booking-details", search);
+    return response.data;
+};
+
 export {
     customerLogin,
     technicianLogin,
@@ -68,4 +74,5 @@ export {
     getTechnicianCategoriesRegex,
     fpassword,
     changepassword,
+    getBookingDetailsForTechnition
 };
