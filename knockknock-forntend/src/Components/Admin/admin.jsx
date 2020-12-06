@@ -86,8 +86,8 @@ function admin() {
                             <tr height="100%">
                                 <td height="100%" width="100%" valign="middle" align="center">
                                     <Typography variant={"h5"}>
-                                    <a href="/allusers"><tr>Fetch All Users</tr></a>
-                                    <tr>Fetch All Technitions</tr>
+                                        <tr><a href="/allusers">Fetch All Users</a></tr>
+                                        <tr><a href="/alltech">Fetch All Technitions</a></tr>
                                     <tr>Fetch Type Of Services</tr>
                                     <tr>Fetch ll Completed esrvice</tr>
                                     <tr>Fetch unbook services</tr>

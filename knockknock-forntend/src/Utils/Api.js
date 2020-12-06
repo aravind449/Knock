@@ -67,7 +67,10 @@ const getAllUserListApi = async () => {
     const response = await axios.get("/users/list-user");
     return response.data;
 };
-
+const getAllTechListApi = async () => {
+    const response = await axios.get("/services/list-tech");
+    return response.data;
+};
 export {
     customerLogin,
     technicianLogin,
@@ -80,5 +83,6 @@ export {
     fpassword,
     changepassword,
     getBookingDetailsForTechnition,
-    getAllUserListApi
+    getAllUserListApi,
+    getAllTechListApi,
 };

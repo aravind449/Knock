@@ -17,6 +17,7 @@ import Techwall from './Components/TechnicianProfile/Techwall'
 import { UserContext } from './UserContext';
 import Admin from './Components/Admin/admin'
 import Allusers from './Components/Admin/Allusers.jsx';
+import Alltech from './Components/Admin/Alltech';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -76,6 +77,9 @@ function App() {
                             </Route>
                             <Route path={"/allusers"}>
                                 <Allusers />
+                            </Route>
+                            <Route path={"/alltech"}>
+                                <Alltech />
                             </Route>
                         </UserContext.Provider>
                     </Switch>

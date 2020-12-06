@@ -45,3 +45,16 @@ exports.getBookingDetails = (req, res) => {
         res.status(400).json({ msg: "search not found" });
     }
 };
+
+ 
+exports.allTechList = (req, res) => {
+
+    console.log("inside router all tech list")
+    let SQLQuery = `SELECT * FROM knockknock.technician;`;
+    mysqlConnectionObject.query(SQLQuery, (err, result) => {
+        if (err) { console.log(err); }
+        else {
+            res.status(200).json(result);
+        }
+    });
+};

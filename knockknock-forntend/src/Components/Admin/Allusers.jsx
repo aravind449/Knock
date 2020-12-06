@@ -39,7 +39,7 @@ return (
                                             <th>Customer Id</th>
                                             <th>First Name</th>
                                             <th>Email</th>
-                                            <th>Password</th>
+                                            {/* <th>Password</th> */}
                                             <th>Mobile</th>
                                             <th>Address</th>
                                             <th>City</th>
@@ -54,7 +54,7 @@ return (
                                                 <td>{all.CustomerId}</td>
                                                 <td>{all.FirstName}</td>
                                                 <td>{all.Email}</td>
-                                                <td>{all.Password}</td>
+                                                {/* <td>{all.Password}</td> */}
                                                 <td>{all.Mobile}</td>
                                                 <td>{all.Address}</td>
                                                 <td>{all.City}</td>
