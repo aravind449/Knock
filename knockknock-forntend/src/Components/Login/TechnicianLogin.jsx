@@ -6,7 +6,8 @@ import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom"
 import {customerLogin, technicianLogin} from "../../Utils/Api";
-
+import { UserContext } from "../../UserContext";
+import { useHistory } from "react-router-dom"
 const useStyles = makeStyles((theme) => ({
     gridItem: {
         display: "flex",
@@ -49,7 +50,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const TechnicianLogin = (props) => {
+    //change made varlock
+    let history = useHistory();
     const classes = useStyles();
+    const [bookings, setBookings] = useState();
+
     const [fields, setFields] = useState({
         userId: "",
         password: "",
@@ -65,7 +70,8 @@ const TechnicianLogin = (props) => {
         try {
             const loginInfo = await technicianLogin(fields);
             if (loginInfo.status === 200) {
-                window.location = "/home";
+                history.push("/techwall")
+                //window.location = "/home";
             } else {
                 console.log(loginInfo);
                 alert(loginInfo.msg);
