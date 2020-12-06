@@ -15,7 +15,8 @@ import FOtp from './Components/Login/FOtp';
 import ChangePassword from './Components/Login/ChangePassword';
 import Techwall from './Components/TechnicianProfile/Techwall'
 import { UserContext } from './UserContext';
-
+import Admin from './Components/Admin/admin'
+import Allusers from './Components/Admin/Allusers.jsx';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -69,6 +70,12 @@ function App() {
                             {/* Edited part */}
                             <Route path={"/techwall"}>
                                 <Techwall />
+                            </Route>
+                            <Route path={"/admin"}>
+                                <Admin />
+                            </Route>
+                            <Route path={"/allusers"}>
+                                <Allusers />
                             </Route>
                         </UserContext.Provider>
                     </Switch>

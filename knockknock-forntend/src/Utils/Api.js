@@ -63,6 +63,11 @@ const getBookingDetailsForTechnition = async (search) => {
     return response.data;
 };
 
+const getAllUserListApi = async () => {
+    const response = await axios.get("/users/list-user");
+    return response.data;
+};
+
 export {
     customerLogin,
     technicianLogin,
@@ -74,5 +79,6 @@ export {
     getTechnicianCategoriesRegex,
     fpassword,
     changepassword,
-    getBookingDetailsForTechnition
+    getBookingDetailsForTechnition,
+    getAllUserListApi
 };
